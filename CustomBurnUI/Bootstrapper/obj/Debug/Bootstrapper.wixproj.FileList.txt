@@ -1,0 +1,6 @@
+D:\WiX Samples\WiXSamples\CustomBurnUI\Bootstrapper\bin\Debug\Bootstrapper.exe
+D:\WiX Samples\WiXSamples\CustomBurnUI\Bootstrapper\bin\Debug\Bootstrapper.wixpdb
+obj\Debug\Bundle.wixobj
+obj\Debug\Bootstrapper.wixproj.BindContentsFileList.txt
+obj\Debug\Bootstrapper.wixproj.BindOutputsFileList.txt
+obj\Debug\Bootstrapper.wixproj.BindBuiltOutputsFileList.txt

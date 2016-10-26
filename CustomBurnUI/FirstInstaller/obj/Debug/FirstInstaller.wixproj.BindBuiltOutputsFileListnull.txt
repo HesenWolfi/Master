@@ -1,0 +1,2 @@
+D:\WiX Samples\WiXSamples\CustomBurnUI\FirstInstaller\bin\Debug\FirstInstaller.msi
+D:\WiX Samples\WiXSamples\CustomBurnUI\FirstInstaller\bin\Debug\FirstInstaller.wixpdb

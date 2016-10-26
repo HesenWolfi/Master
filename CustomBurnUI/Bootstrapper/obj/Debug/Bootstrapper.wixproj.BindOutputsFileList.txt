@@ -1,0 +1,2 @@
+D:\WiX Samples\WiXSamples\CustomBurnUI\Bootstrapper\bin\Debug\Bootstrapper.exe
+D:\WiX Samples\WiXSamples\CustomBurnUI\Bootstrapper\bin\Debug\Bootstrapper.wixpdb

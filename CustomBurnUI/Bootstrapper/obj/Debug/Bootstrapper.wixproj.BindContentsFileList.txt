@@ -1,0 +1,8 @@
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\InstallerUI.BootstrapperCore.config
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\InstallerUI.dll
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\Microsoft.Practices.Prism.Mvvm.dll
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\Microsoft.Practices.Prism.Mvvm.Desktop.dll
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.dll
+D:\WiX Samples\WiXSamples\CustomBurnUI\InstallerUI\bin\Debug\Newtonsoft.Json.dll
+D:\WiX Samples\WiXSamples\CustomBurnUI\FirstInstaller\bin\Debug\FirstInstaller.msi
+D:\WiX Samples\WiXSamples\CustomBurnUI\Bootstrapper\License.txt

@@ -1,0 +1,20 @@
+﻿MyInstallerBA
+
+
+library
+C#
+.cs
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\
+WSO.Installs.Installer
+none
+false
+DEBUG;TRACE
+
+3561648040
+
+26271664210
+14-922002539
+MainWindow\MainWindowView.xaml;PreRequisites\PreRequisite\PreRequisiteView.xaml;WelcomeDlg\WelcomeDlgView.xaml;
+
+False
+

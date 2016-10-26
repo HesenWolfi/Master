@@ -1,0 +1,6 @@
+D:\WiX Samples\WiXSamples\CustomBurnUI\FirstInstaller\bin\Debug\FirstInstaller.msi
+D:\WiX Samples\WiXSamples\CustomBurnUI\FirstInstaller\bin\Debug\FirstInstaller.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\FirstInstaller.wixproj.BindContentsFileListnull.txt
+obj\Debug\FirstInstaller.wixproj.BindOutputsFileListnull.txt
+obj\Debug\FirstInstaller.wixproj.BindBuiltOutputsFileListnull.txt

@@ -1,0 +1,15 @@
+c:\users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA.csprojResolveAssemblyReference.cache
+c:\users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA_MarkupCompile.cache
+c:\users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA_MarkupCompile.lref
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\bin\Debug\MyInstallerBA.dll
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\bin\Debug\MyInstallerBA.pdb
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\bin\Debug\BootstrapperCore.dll
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\bin\Debug\BootstrapperCore.xml
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA.g.resources
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA.dll
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MyInstallerBA.pdb
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MainWindowView.g.cs
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\rich.king\documents\visual studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MainWindowView.baml
+C:\Users\rich.king\Documents\Visual Studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\PreRequisites\PreRequisite\PreRequisiteView.g.cs
+C:\Users\rich.king\Documents\Visual Studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\MainWindow\MainWindowView.g.cs

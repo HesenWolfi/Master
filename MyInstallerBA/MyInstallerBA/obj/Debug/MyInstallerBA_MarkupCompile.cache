@@ -1,0 +1,20 @@
+﻿MyInstallerBA
+
+
+library
+C#
+.cs
+C:\Users\rich.king\Documents\Visual Studio 2015\Projects\MyInstallerBA\MyInstallerBA\obj\Debug\
+WSO.Installs.Installer
+none
+false
+DEBUG;TRACE
+
+2-1987682120
+
+18918306758
+14-922002539
+MainWindow\MainWindowView.xaml;PreRequisites\PreRequisite\PreRequisiteView.xaml;
+
+True
+

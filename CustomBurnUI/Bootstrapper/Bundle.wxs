@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?define NetFx452MinRelease = 379893 ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="Bootstrapper" Version="1.0.0.0" Manufacturer="Rainer Stropek" UpgradeCode="06A19F6F-688C-44A6-B3D3-26F72DE50689"
+			DisableModify="no">
+		<BootstrapperApplicationRef Id="ManagedBootstrapperApplicationHost">
+			<Payload Name="BootstrapperCore.config" SourceFile="$(var.InstallerUI.TargetDir)InstallerUI.BootstrapperCore.config" />
+			<Payload SourceFile="$(var.InstallerUI.TargetPath)" />
+			<Payload SourceFile="$(var.InstallerUI.TargetDir)Microsoft.Practices.Prism.Mvvm.dll" />
+			<Payload SourceFile="$(var.InstallerUI.TargetDir)Microsoft.Practices.Prism.Mvvm.Desktop.dll" />
+			<Payload SourceFile="$(var.InstallerUI.TargetDir)Microsoft.Practices.Prism.SharedInterfaces.dll" />
+			<Payload SourceFile="$(var.InstallerUI.TargetDir)Newtonsoft.Json.dll" />
+			<PayloadGroupRef Id="LicensePayload"/>
+		</BootstrapperApplicationRef>
+
+		<!-- Variables modified by custom WPF UI -->
+		<Variable bal:Overridable="yes" Name="Prerequisite" Value=""/>
+		<Variable bal:Overridable="yes" Name="InstallLevel" Value="1"/>
+
+    <WixVariable Id="WixMbaPrereqLicenseUrl" Value="" />
+    <WixVariable Id="WixMbaPrereqPackageId" Value="" />    
+
+    <util:RegistrySearch
+          Id="NETFRAMEWORK4"
+          Variable="NETFRAMEWORK4"
+          Root="HKLM"
+          Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+          Value="Release"
+          Result="value" />
+    <util:RegistrySearch Id="Redist2008Found" Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{9A25302D-30C0-39D9-BD6F-21E6EC160475}" Result="exists" Variable="Redist2008Found" />
+    <util:RegistrySearch Id="Redist2010Found" Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F0C3E5D1-1ADE-321E-8167-68EF0DE699A5}" Result="exists" Variable="Redist2010Found"/>
+    <Variable Name="INCLUDECRVIEWER" Value="false" bal:Overridable="yes" Type="string" />
+
+
+
+    <Chain>
+      <!--<ExePackage Id="VCRedist08" SourceFile=".\vcredist_x86.exe" Compressed="yes" DetectCondition="Redist2008Found" InstallCondition="INCLUDECRVIEWER&lt;&gt;&quot;only&quot;" InstallCommand="/q" Permanent="yes">
+      </ExePackage>
+
+      <ExePackage Id="VCRedist10" SourceFile=".\VC Redist 2010\vcredist_x86.exe" Compressed="yes" DetectCondition="Redist2010Found" InstallCondition="INCLUDECRVIEWER&lt;&gt;&quot;only&quot;" InstallCommand="/q" Permanent="yes">
+      </ExePackage>
+
+      <ExePackage
+        Id="NetFx452FullRedist"
+        Compressed="yes"
+        Cache="no"
+        InstallCommand="/q /norestart /ChainingPackage &quot;[WixBundleName]&quot;"
+        RepairCommand="/q /norestart /repair /ChainingPackage &quot;[WixBundleName]&quot;"
+        UninstallCommand="/uninstall /q /norestart /ChainingPackage &quot;[WixBundleName]&quot;"
+        PerMachine="yes"
+        DetectCondition="NETFRAMEWORK4 &gt;= $(var.NetFx452MinRelease)"
+        InstallCondition="(INCLUDECRVIEWER&lt;&gt;&quot;only&quot;)"
+        Vital="yes"
+        Permanent="yes"
+        Protocol="netfx4"
+        SourceFile=".\NDP452-KB2901907-x86-x64-AllOS-ENU.exe"
+        Name="Redist\NDP452-KB2901907-x86-x64-AllOS-ENU.exe">
+      </ExePackage>
+
+      <MsiPackage Id="CrystalReports2008" SourceFile=".\CRRedist2008_x86.msi" Compressed="yes" Description="Crystal Reports 2008 for Markit WSO Administrator Suite 12.0" DisplayInternalUI="yes" DisplayName="Crystal Reports 2008 for Markit WSO Administrator Suite 12.0" EnableFeatureSelection="yes" ForcePerMachine="yes" InstallCondition="(INCLUDECRVIEWER=&quot;true&quot;) OR (INCLUDECRVIEWER=&quot;only&quot;)" Permanent="yes" SuppressSignatureVerification="yes" Visible="yes" Vital="no" />-->
+
+      <!--<PackageGroupRef Id='NetFx45Web' />-->
+			<MsiPackage Id="FirstInstaller" SourceFile="$(var.FirstInstaller.TargetPath)" Visible="yes">
+				<MsiProperty Name="PREREQUISITE" Value="[Prerequisite]"/>
+				<MsiProperty Name="INSTALLLEVEL" Value="[InstallLevel]"/>
+			</MsiPackage>
+			<!--<MsiPackage Id="SecondInstaller" SourceFile="$(var.SecondInstaller.TargetPath)" Visible="yes">
+				<MsiProperty Name="PREREQUISITE" Value="[Prerequisite]"/>
+				<MsiProperty Name="INSTALLLEVEL" Value="[InstallLevel]"/>
+			</MsiPackage>-->
+		</Chain>
+	</Bundle>
+
+	<!-- License data -->
+	<Fragment>
+		<!-- Payload for license file -->
+		<PayloadGroup Id="LicensePayload"> 
+             <Payload SourceFile="License.txt" /> 
+         </PayloadGroup> 
+
+		<!-- Add custom table with reference to license file -->
+		<CustomTable Id='LicenseInformation'>
+			<Row>
+				<Data Column='LicenseFile'>License.txt</Data>
+			</Row>
+		</CustomTable>
+	</Fragment>
+
+	<!-- Custom table definition for license file data -->
+	<Fragment>
+		<CustomTable Id='LicenseInformation' BootstrapperApplicationData='yes'>
+			<Column Id='LicenseFile' Category='Text' Type='string' Width='0' Nullable='yes' PrimaryKey='yes' />
+		</CustomTable>
+	</Fragment>
+</Wix>
